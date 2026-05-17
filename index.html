@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WalkQuest — Politique de confidentialité</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0d0a1a;
+    color: #e8e4f0;
+    padding: 2rem 1rem 4rem;
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #1e1a30; }
+  header h1 { font-size: 1.5rem; font-weight: 700; color: #f0ecff; }
+  header p  { font-size: 0.85rem; color: #7c7099; margin-top: 6px; }
+
+  h2 {
+    font-size: 1rem; font-weight: 600; color: #ddd6fe;
+    margin: 2rem 0 0.6rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1e1a30;
+  }
+  h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+
+  p { font-size: 0.875rem; color: #8b85a8; margin-bottom: 0.75rem; }
+
+  ul { padding-left: 1.4rem; margin-bottom: 0.75rem; }
+  li { font-size: 0.875rem; color: #8b85a8; margin-bottom: 4px; }
+
+  strong { color: #c4b5fd; font-weight: 500; }
+
+  .updated {
+    display: inline-block;
+    background: #1a1530; border: 1px solid #3d2f6e;
+    color: #a78bfa; font-size: 0.72rem; padding: 3px 12px;
+    border-radius: 20px; margin-top: 8px;
+  }
+
+  footer { text-align: center; margin-top: 3rem; font-size: 0.72rem; color: #3d3858; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>WalkQuest</h1>
+    <p>Politique de confidentialité</p>
+    <span class="updated">Dernière mise à jour : mai 2026</span>
+  </header>
+
+  <h2>1. Introduction</h2>
+  <p>Cette politique de confidentialité décrit comment l'application <strong>WalkQuest</strong>, développée par <strong>Josselin Sanjuan</strong>, collecte, utilise et protège vos informations personnelles.</p>
+  <p>En utilisant WalkQuest, vous acceptez les pratiques décrites dans cette politique.</p>
+
+  <h2>2. Données collectées</h2>
+  <p><strong>Données stockées localement sur votre appareil :</strong></p>
+  <ul>
+    <li>Nombre de pas et distance parcourue</li>
+    <li>Progression dans les quêtes (checkpoints atteints, XP, badges)</li>
+    <li>Pseudonyme et avatar choisis lors de l'onboarding</li>
+    <li>Préférences d'univers et paramètres de l'application</li>
+  </ul>
+  <p>Ces données sont stockées exclusivement sur votre appareil via AsyncStorage et ne sont transmises à aucun serveur sans votre consentement explicite.</p>
+
+  <p><strong>Données collectées avec votre consentement (compte Google optionnel) :</strong></p>
+  <ul>
+    <li>Adresse e-mail Google (uniquement pour l'authentification)</li>
+    <li>Identifiant unique de compte</li>
+    <li>Photo de profil (si vous choisissez d'en utiliser une via votre galerie)</li>
+    <li>Données de progression synchronisées avec nos serveurs (Supabase)</li>
+  </ul>
+
+  <h2>3. Permissions utilisées</h2>
+  <ul>
+    <li><strong>ACTIVITY_RECOGNITION</strong> — nécessaire pour comptabiliser vos pas via le capteur du téléphone</li>
+    <li><strong>BODY_SENSORS</strong> — accès au podomètre matériel de l'appareil</li>
+    <li><strong>Accès à la galerie photos</strong> — uniquement si vous choisissez de personnaliser votre avatar avec une photo</li>
+    <li><strong>Notifications</strong> — pour vous alerter lors de l'atteinte d'un checkpoint (avec votre autorisation)</li>
+  </ul>
+  <p>Aucune permission de localisation GPS n'est requise. WalkQuest n'accède jamais à votre position géographique.</p>
+
+  <h2>4. Utilisation des données</h2>
+  <p>Vos données sont utilisées exclusivement pour :</p>
+  <ul>
+    <li>Faire progresser votre avatar sur les cartes de quête</li>
+    <li>Sauvegarder votre progression localement</li>
+    <li>Synchroniser votre progression entre vos appareils (si vous avez lié un compte Google)</li>
+    <li>Afficher vos statistiques dans l'application</li>
+  </ul>
+  <p>Nous ne vendons pas, ne louons pas et ne partageons pas vos données personnelles avec des tiers à des fins commerciales.</p>
+
+  <h2>5. Stockage et sécurité</h2>
+  <p>Les données locales sont stockées via AsyncStorage sur votre appareil Android. Si vous activez la synchronisation cloud, vos données sont transmises de manière sécurisée (HTTPS) vers nos serveurs hébergés sur <strong>Supabase</strong> (région EU — Irlande), conformément au RGPD.</p>
+  <p>L'authentification Google est gérée via OAuth 2.0. Nous ne stockons jamais votre mot de passe Google.</p>
+
+  <h2>6. Conservation des données</h2>
+  <p>Les données locales sont conservées jusqu'à désinstallation de l'application ou suppression via les Paramètres. Les données cloud sont supprimées sur demande via l'option <strong>« Supprimer mon compte »</strong> dans les Paramètres de l'application.</p>
+
+  <h2>7. Droits des utilisateurs (RGPD)</h2>
+  <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+  <ul>
+    <li><strong>Droit d'accès</strong> — consulter vos données dans l'onglet Profil</li>
+    <li><strong>Droit de suppression</strong> — supprimer votre compte et toutes vos données via les Paramètres</li>
+    <li><strong>Droit de portabilité</strong> — vos données de progression sont stockées dans des formats standards</li>
+    <li><strong>Droit d'opposition</strong> — vous pouvez utiliser l'application sans créer de compte</li>
+  </ul>
+
+  <h2>8. Mineurs</h2>
+  <p>WalkQuest est destinée à un public général. Nous ne collectons pas sciemment de données personnelles auprès d'enfants de moins de 13 ans. Si vous avez moins de 13 ans, veuillez utiliser l'application sans créer de compte Google.</p>
+
+  <h2>9. Modifications de cette politique</h2>
+  <p>Nous pouvons mettre à jour cette politique de confidentialité. En cas de modification importante, une notification sera affichée dans l'application. La date de dernière mise à jour est indiquée en haut de ce document.</p>
+
+  <h2>10. Contact</h2>
+  <p>Pour toute question relative à vos données personnelles ou pour exercer vos droits RGPD, utilisez la fonction <strong>« Supprimer mon compte »</strong> dans les Paramètres de l'application, ou contactez-nous à : <strong>josselinsanjuan@gmail.com</strong></p>
+
+  <footer>WalkQuest · Josselin Sanjuan · 2026</footer>
+
+</div>
+</body>
+</html>
